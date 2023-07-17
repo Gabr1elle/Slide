@@ -100,6 +100,7 @@ export class Slide {
     this.wrapper.dispatchEvent(this.changeEvent);
   }
 
+
   changeActiveClass() {
     this.slideArray.forEach(item => item.element.classList.remove(this.activeClass));
     this.slideArray[this.index.active].element.classList.add(this.activeClass);
@@ -142,7 +143,6 @@ export class Slide {
     this.slidesConfig();
     this.addResizeEvent();
     this.changeSlide(0);
-    return this;
   }
 }
 
@@ -150,6 +150,12 @@ export class SlideNav extends Slide {
   constructor(slide, wrapper) {
     super(slide, wrapper);
     this.bindControlEvents();
+  }
+
+  addArrow(prev, next) {
+    this.prevElement = document.querySelector(prev);
+    this.nextElement = document.querySelector(next);
+    this.addArrowEvent();
   }
 
   addArrow(prev, next) {
