@@ -2,27 +2,31 @@ import debounce from './debounce.js';
 
 export class Slide {
   constructor(slide, wrapper) {
-    this.slide = document.querySelector(slide)
+    this.slide = document.querySelector(slide);
     this.wrapper = document.querySelector(wrapper);
-    this.dist = { finalPosition: 0, startX: 0, movement: 0 }
+    this.dist = { finalPosition: 0, startX: 0, movement: 0 };
     this.activeClass = 'active';
     this.changeEvent = new Event('changeEvent');
   }
 
+  // controla a forma como o slide é animado.
   transition(active) {
     this.slide.style.transition = active ? 'transform .3s' : '';
   }
 
+  //  especifica a distancia a ser movido o slide.
   moveSlide(distX) {
     this.dist.movePosition = distX;
     this.slide.style.transform = `translate3d(${distX}px, 0, 0)`;
   }
 
+  // atualiza a posição de um elemento com base no movimento do mouse do usuário 
   updatePosition(clientX) {
     this.dist.movement = (this.dist.startX - clientX) * 1.6;
     return this.dist.finalPosition - this.dist.movement;
   }
 
+  // controlar a animação do elemento.
   onStart(event) {
     let movetype;
     if (event.type === 'mousedown') {
@@ -88,7 +92,7 @@ export class Slide {
       prev: index ? index - 1 : undefined,
       active: index,
       next: index === last ? undefined : index + 1,
-    }
+    };
   }
 
   changeSlide(index) {
@@ -99,7 +103,6 @@ export class Slide {
     this.changeActiveClass();
     this.wrapper.dispatchEvent(this.changeEvent);
   }
-
 
   changeActiveClass() {
     this.slideArray.forEach(item => item.element.classList.remove(this.activeClass));
@@ -143,6 +146,7 @@ export class Slide {
     this.slidesConfig();
     this.addResizeEvent();
     this.changeSlide(0);
+    return this;
   }
 }
 
@@ -150,12 +154,6 @@ export default class SlideNav extends Slide {
   constructor(slide, wrapper) {
     super(slide, wrapper);
     this.bindControlEvents();
-  }
-
-  addArrow(prev, next) {
-    this.prevElement = document.querySelector(prev);
-    this.nextElement = document.querySelector(next);
-    this.addArrowEvent();
   }
 
   addArrow(prev, next) {
@@ -204,4 +202,6 @@ export default class SlideNav extends Slide {
     this.eventControl = this.eventControl.bind(this);
     this.activeControlItem = this.activeControlItem.bind(this);
   }
+
+  
 }

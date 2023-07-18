@@ -1,0 +1,13 @@
+
+// Configuração ESlint para verificar o código JavaScript para erros e padrões de código indesejados. //
+{
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "no-param-reassign": 0,
+    "import/extensions": 0,
+    "no-console": 0
+  }
+}
