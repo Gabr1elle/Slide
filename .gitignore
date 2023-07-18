@@ -1,3 +1,2 @@
-# ignorar pastas 
-
-node_modules
+# ignorar pastas
+/node_modules
