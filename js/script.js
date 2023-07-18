@@ -23,8 +23,11 @@ tabNav.init();
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 
-// const modalt = new Modal('[data-modal="junior"]', '[data-modal="fechart"]', '[data-modal="juniort"]');
-// modalt.init();
+const modalEmpresa = new Modal('[data-modal="empresaText"]', '[data-modal="fechar-empresa"]', '[data-modal="container-empresa"]');
+modalEmpresa.init();
+
+const modalEquipe = new Modal('[data-modal="equipeText"]', '[data-modal="fechar-equipe"]', '[data-modal="container-equipe"]');
+modalEquipe.init();
 
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
