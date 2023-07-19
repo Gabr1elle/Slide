@@ -51,3 +51,16 @@ fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 const slide = new SlideNav('.slide', '.slide-wrapper');
 slide.init();
 slide.addControl('.custom-controls');
+
+const swiper = new Swiper(".mySwiper", {
+    cssMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    mousewheel: true,
+    keyboard: true,
+});

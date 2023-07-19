@@ -13,7 +13,7 @@ ul {
 }
 
 body {
-  background: #faf6ed;
+  background: #dfc4a1;
   color: #222;
   -webkit-font-smoothing: antialiased;
 }
@@ -27,7 +27,7 @@ body {
   grid-column: 3 / 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background: #FB5;
+  background: rgb(25, 179, 171);
 }
 
 .menu ul {
@@ -75,7 +75,7 @@ body {
   text-transform: uppercase;
   letter-spacing: .1em;
   margin-bottom: 1rem;
-  color: #E54;
+  color: rgb(25, 179, 171);
 }
 
 .animais h2::before {
@@ -84,7 +84,7 @@ body {
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: rgb(25, 179, 171);
 }
 
 .animais p {
@@ -101,6 +101,7 @@ body {
 
 .animais-lista li {
   cursor: pointer;
+  background: rgb(133, 143, 134);
 }
 
 .animais-lista::-webkit-scrollbar {
@@ -108,13 +109,13 @@ body {
 }
 
 .animais-lista::-webkit-scrollbar-thumb {
-  background: #FB5;
-  border-left: 4px solid #faf6ed;
-  border-right: 4px solid #faf6ed;
+  background: rgb(25, 179, 171);
+  border-left: 4px solid #dfc4a1;
+  border-right: 4px solid #dfc4a1;
 }
 
 .animais-lista::-webkit-scrollbar-track {
-  background: #faf6ed;
+  background: #dfc4a1;
 }
 
 .animais-descricao {
@@ -134,7 +135,7 @@ body {
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: .5rem;
-  color: #E54;
+  color: rgb(0, 0, 0);
 }
 
 .faq-lista dt::before {
@@ -143,7 +144,7 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: rgb(85, 64, 71);
 }
 
 .faq-lista dd {
@@ -171,13 +172,13 @@ body {
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: rgb(7, 6, 5);
 }
 
 .copy {
   grid-column: 3/5;
   margin-bottom: 2rem;
-  background: #FB5;
+  background: rgb(25, 179, 171);;
 }
 
 .copy p {
@@ -304,11 +305,11 @@ body {
 }
 
 [data-semana].aberto::after {
-  background: #3F4;
+  background: rgb(14, 180, 192);
 }
 
 .btc-preco {
-  background: #3F4;
+  background: rgb(14, 180, 192);
   padding: .2rem .5rem;
   font-weight: bold;
   border-radius: 2px;  

@@ -1,7 +1,7 @@
 .modal-container {
   height: 100vh;
   width: 100%;
-  background: rgba(0,0,0,.5);
+  background: rgba(255, 241, 44, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -16,17 +16,18 @@
 }
 
 .modal {
-  background: white;
+  background: #DDa66f;
   min-width: 300px;
   padding: 25px;
-  border: 10px solid #FB5;
-  box-shadow: 0 0 0 10px white;
+  border: 10px solid #DDa66f;
+  box-shadow: 0 0 0 10px #DDa66f;
   position: absolute;
   margin-left: auto;
   margin-top: auto;
   text-align: initial;
   box-sizing: border-box;
   max-width: 900px;
+  border-radius: 5%;;
 
 }
 
@@ -87,3 +88,58 @@
   font-weight: bold;
 }
 
+.tituloEmpresa {
+  font-family: 'Playfair Display SC';
+  text-align: center;
+}
+
+.modal-container .modal p {
+  font-family: 'helvetica';
+}
+
+.modal-container .modal .img-emp {
+  width: 400px;
+  margin: 20px auto;
+  right: 0 auto;
+  border-radius: 5%;
+  top: 20px auto;
+
+}
+
+.img-voluntarios {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.tituloEquipe { 
+  font-family: 'Playfair Display SC';
+  text-align: center;
+}
+
+.swiper {
+  width: 50%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #1a4ebd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+:root {
+  --swiper-theme-color: white;
+}
